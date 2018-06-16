@@ -15,7 +15,8 @@ handleSearch: function(searchingText) {
       loading: true  
     });
     
-    this.getGif(searchingText, function(gif) {  
+    this.getGif(searchingText)
+        .then(function(gif) {  
       this.setState({  
         loading: false,  
         gif: gif,  
