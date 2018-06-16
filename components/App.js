@@ -42,7 +42,7 @@ handleSearch: function(searchingText) {
                     }
             };
                 
-            request.onerror = function () {
+            xhr.onerror = function () {
                 reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
             };
                 
