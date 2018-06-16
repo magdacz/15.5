@@ -41,6 +41,11 @@ handleSearch: function(searchingText) {
                         reject(new Error(this.statusText));
                     }
             };
+                
+            request.onerror = function () {
+                reject(new Error(`XMLHttpRequest Error: ${this.statusText}`));
+            };
+                
             xhr.open('GET', url);
             xhr.send();
         }
